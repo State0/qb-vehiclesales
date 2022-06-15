@@ -80,7 +80,7 @@ var app = new Vue({
             return (this.sellPrice / 100 * 4).toFixed(0);
         },
         total() {
-            return (this.sellPrice / 100 * 77).toFixed(0);
+            return (this.sellPrice / 1 * 1).toFixed(0);
         }
     }
 

@@ -101,7 +101,7 @@ RegisterNetEvent('qb-occasions:server:buyVehicle', function(vehicleData)
         if Player.PlayerData.money.bank >= result[1].price then
             local SellerCitizenId = result[1].seller
             local SellerData = QBCore.Functions.GetPlayerByCitizenId(SellerCitizenId)
-            local NewPrice = math.ceil((result[1].price / 100) * 77)
+            local NewPrice = math.ceil(result[1].price)
             Player.Functions.RemoveMoney('bank', result[1].price)
             MySQL.insert(
                 'INSERT INTO player_vehicles (license, citizenid, vehicle, hash, mods, plate, state) VALUES (?, ?, ?, ?, ?, ?, ?)', {
